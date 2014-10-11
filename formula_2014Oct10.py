@@ -5,11 +5,11 @@ import numpy as np
 #   B3 --> Array[1]
 #   B4 --> Array[2]
 
-# --------------------------------------------------------------
-# Set up Function to return the correct code depending on the condition
-#    Note: Functions must be defined before they are used. You have to
-#          build the machinery before you run inputs through it
-# --------------------------------------------------------------
+"""
+Set up a function to return the correct code depending on the condition
+*Note*: Functions must be defined before they are used. You have to
+        build the machinery before you run inputs through it.
+"""
 def return_argument_code(cond_vals):
 
     # Sort the array from Large-->Small
@@ -35,9 +35,9 @@ def return_argument_code(cond_vals):
     else:
         return None
 
-# --------------------------------------------------------------
-# Set Values, and then test the return values of the function
-# --------------------------------------------------------------
+"""
+Set Values, and then test the return values of the function
+"""
 # The values of the B cells
 B2=1
 B3=1
