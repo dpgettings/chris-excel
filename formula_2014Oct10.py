@@ -18,11 +18,11 @@ def return_argument_code(cond_vals):
     cond_vals_descending = np.copy(np.sort(cond_vals)[::-1])
 
     # A nice thing to do: group answers that return the same code using OR
-    if (cond_vals[0] == cond_vals[1] == cond_vals[2] or cond_vals[0] == cond_vals[1] or cond_vals[1] == cond_vals[2]):
+    if (cond_vals[0] == cond_vals[1] == cond_vals[2]) or (cond_vals[0] == cond_vals[1]) or (cond_vals[1] == cond_vals[2]):
         return "DP_B"
 
     # "Second-largest value" is equivalent to "2nd element of Large-->Small sorted array"
-    elif cond_vals[0] == cond_vals[2] or cond_vals_descending[1] == cond_vals[0]:
+    elif (cond_vals[0] == cond_vals[2]) or cond_vals_descending[1] == cond_vals[0]:  # parentheses are optional
         return "GMO_B"
 
     elif cond_vals_descending[1] == cond_vals[2]:
